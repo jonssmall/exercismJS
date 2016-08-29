@@ -1,11 +1,12 @@
+var cbObj = require('./circular-buffer');
 var circularBuffer = require('./circular-buffer').circularBuffer;
 var bufferEmptyException = require('./circular-buffer').bufferEmptyException;
 var bufferFullException = require('./circular-buffer').bufferFullException;
 
 describe('CircularBuffer', function() {
 
-  it('reading an empty buffer throws a BufferEmptyException', function() {
-    var buffer = circularBuffer(1);
+  it('reading an empty buffer throws a BufferEmptyException', function() {            
+    var buffer = circularBuffer(1);    
     expect(buffer.read).toThrow(bufferEmptyException());
   });
 
